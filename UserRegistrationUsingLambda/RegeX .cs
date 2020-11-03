@@ -11,6 +11,8 @@ namespace UserRegistrationUsingLambda
         public static string FirstNameREGEX = "^[A-Z]{1}[A-Za-z]{2,}$";
         //pattern for valid lastname
         public static string LastNameREGEX = "^[A-Z]{1}[A-Za-z]{2,}$";
+        //pattern for valid mobile mo with country code
+        public static string MobileNumREGEX = "^[9]{1}[1]{1}[ ]{1}[6-9]{1}[0-9]{9}$";
         //pattern for valid email
         public static string EmailREGEX = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
         //pattern for valid rule1
