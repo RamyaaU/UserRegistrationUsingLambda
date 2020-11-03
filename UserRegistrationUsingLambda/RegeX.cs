@@ -13,6 +13,8 @@ namespace UserRegistrationUsingLambda
         public static string LastNameREGEX = "^[A-Z]{1}[A-Za-z]{2,}$";
         //pattern for valid email
         public static string EmailREGEX = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
+        //pattern for valid mobile mo with country code
+        public static string MobileNumREGEX = "^[9]{1}[1]{1}[ ]{1}[6-9]{1}[0-9]{9}$";
         //pattern for valid rule1
         public static string Condition1REGEX = "^[A-Za-z0-9@$!%*#?&]{8,}$";
 
@@ -35,6 +37,15 @@ namespace UserRegistrationUsingLambda
         public bool ValidLastName(string name)
         {
             return Regex.IsMatch(name, LastNameREGEX);
+        }
+        /// <summary>
+        /// Valids the mobile.
+        /// </summary>
+        /// <param name="mobileNumber">The mobile number.</param>
+        /// <returns></returns>
+        public bool ValidMobile(string mobileNumber)
+        {
+            return Regex.IsMatch(mobileNumber, MobileNumREGEX); ;
         }
         /// <summary>
         /// Valids the email.
